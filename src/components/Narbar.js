@@ -1,4 +1,3 @@
-import React from 'react'
 import "./styles/Narbar.css"
 import { Search, ShoppingCartOutlined } from "@mui/icons-material"
 import Badge from '@mui/material/Badge';
@@ -37,3 +36,5 @@ export const Narbar = () => {
         </div>
     )
 }
+
+export default Narbar
