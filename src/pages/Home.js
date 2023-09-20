@@ -16,6 +16,7 @@ export const Home = () => {
             <Categories />
             <Products />
             <Newsletter />
+            <Footer />
         </div>
     )
 }
