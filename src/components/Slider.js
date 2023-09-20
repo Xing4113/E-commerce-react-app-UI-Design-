@@ -3,23 +3,28 @@ import "./styles/Slider.css"
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { sliderItems } from '../data';
+import { mobile } from "../responsive";
+
+const Container = styled.div`
+    ${mobile({ display: "none" })}
+`
 
 const Slide = styled.div`
-width: 100vw;
-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 
-background-color: #${props => props.bg};
+    background-color: #${props => props.bg};
 `
 const Wrapper = styled.div`
-height: 100%;
+    height: 100%;
 
-display: flex;
+    display: flex;
 
-transition: all 1.5s ease;
-transform:translateX(${props => props.slideIndex * -100}vw);
+    transition: all 1.5s ease;
+    transform:translateX(${props => props.slideIndex * -100}vw);
 `
 
 export const Slider = () => {
@@ -34,7 +39,7 @@ export const Slider = () => {
     }
 
     return (
-        <div className='slider-container'>
+        <Container className='slider-container'>
             <div className='arrow arrow-left' onClick={() => handleClick("left")}>
                 <KeyboardArrowLeft className='left-arrow' />
             </div>
@@ -59,6 +64,6 @@ export const Slider = () => {
             <div className='arrow arrow-right' onClick={() => handleClick("right")}>
                 <KeyboardArrowRight className='right-arrow' />
             </div>
-        </div >
+        </Container>
     )
 }

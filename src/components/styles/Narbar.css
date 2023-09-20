@@ -1,7 +1,5 @@
 .navbar-container {
   height: 60px;
-
-  box-sizing: border-box;
 }
 
 .header-container {
@@ -49,10 +47,12 @@
 
 .search-box {
   border: none;
+  padding: 10px;
 }
 
 .search-icon {
   color: gray;
+  margin-right: 10px;
 }
 
 .header-logo {

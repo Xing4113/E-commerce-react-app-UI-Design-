@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import "./styles/CategoryItem.css"
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 flex:1;
@@ -23,11 +24,15 @@ const Title = styled.div`
 color: white;
 margin-bottom: 20px;
 `
+const Image = styled.img`
+${mobile({ height: "20vh" })}
+
+`
 export const CategoryItem = ({ item }) => {
 
     return (
         <Container>
-            <img className='category-image' src={item.image} />
+            <Image className='category-image' src={item.image} />
             <Info>
                 <Title>{item.title}</Title>
                 <button className='shop-now-btn'>SHOP NOW</button>
