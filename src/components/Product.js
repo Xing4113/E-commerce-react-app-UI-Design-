@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from "@mui/icons-material"
 import "./styles/Product.css"
+import { mobile } from "../responsive";
 
 const Info = styled.div`
     opacity: 0;
@@ -24,7 +25,8 @@ const Info = styled.div`
 const Container = styled.div`
 flex:1;
 margin: 5px;
-min-width: 280px;
+min-width: 285px;
+max-width: 285px;
 height: 350px;
 
 display: flex;
@@ -37,6 +39,9 @@ position:relative;
 &:hover ${Info}{
  opacity:1;
 }
+
+${mobile({ maxWidth: "400px" })}
+
 `
 const Icon = styled.div`
     width:40px;

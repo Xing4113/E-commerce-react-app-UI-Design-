@@ -21,7 +21,8 @@ align-items: center;
 justify-content: center;
 `
 const Title = styled.div`
-color: white;
+color: grey;
+font-size: 25px;
 margin-bottom: 20px;
 `
 const Image = styled.img`
